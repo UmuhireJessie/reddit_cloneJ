@@ -1,10 +1,18 @@
-.reddit-post {
+:root
+{
+    --text-black-700:#504e70;
+}
+.reddit-post, .reddit-comment {
     margin-left: 6em;
     margin-top: 5em;
     background-color: rgba(234, 232, 232, 1);
     max-width: 80%;
+    border-radius: 5px;
 }
-
+.reddit-comment {
+    margin-top: 0.5em;
+}
+/* ------------------------------------ the post ---------------------------*/
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -13,34 +21,82 @@
     position: relative;
 }
 
-.reddit-post .post-image {
-    padding: 10px;
-    background-color: blue;
-    flex: 0 0 15%;
-    max-width: 15%;
+.padd-30{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.title, .author, .created_at {
+    flex: 0 0 50%;
+    max-width: 50%;
     display: inline-block;
-}
-.reddit-post .post-info,
-.reddit-post .post-image {
-    display: inline-block; 
-}
-.reddit-post .post-image img{
-    max-width: 60px;
-}
-.reddit-post .post-image .votes {
-    color: white;
-    margin-right: 15px;
-    margin-top: 40px;
-    
+    margin-right: 10em;
 }
 
+.post-image img{
+    padding-top: 30px;
+    max-width: 300px;
+}
 
-.reddit-post .post-info{
-    padding: 10px;
-    background-color: red;
+/* --------------------The comment form  -------------------------------------*/
+
+.commentform{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.commentform .col-6{
     flex: 0 0 80%;
     max-width: 80%;
-    display: inline-block;
+    padding-left:45px;
+   
+    /* background-color: red; */
+}
+.name-field {
+    margin-top: 10px;
+}
+.text-field {
+
+}
+
+.commentform .form-item{
+    margin-bottom: 15px;
+}
+.commentform .form-item .form-control{
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #fdf9ff;
+    border: 1.5px solid #e8dfec;
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+.commentform .form-item .form-control:focus{
+    border: 1.5px solid #e8dfec;
+}
+.commentform .form-item textarea.form-control{
+    height: 80px;
+}
+.commentform .form-item textarea::-webkit-input-placeholder{
+    font-family: 'sans-serif';
+}
+.commentform .btn{
+    height: 30px;
+    padding: 0 30px;
+    cursor: pointer;
+    background-color: #4A4ADE;
+    border: none;
+    border-radius: 5px;
+    color: #e8dfec;
+    margin-left: 15px;
+}
+
+.reddit-footer {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 50% ;
 }
 
 
